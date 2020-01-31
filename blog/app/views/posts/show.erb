@@ -1,2 +1,8 @@
 <h1><%= @post.title %></h1>
-<%= @post.content %>
+<%= @post.content %><br>
+
+<button><a href="/posts/<%= @post.id %>/edit">Edit me</a></button>
+<form action="/posts/<%= @post.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="Submit" value="delete">
+</form>
